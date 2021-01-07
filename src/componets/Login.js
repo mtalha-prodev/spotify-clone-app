@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import SpotifyLogo from "../images/spotifyWhiteLogo.png";
 import { loginUrl } from "../spotify";
 import "./login.css";
