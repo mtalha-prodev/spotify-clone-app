@@ -12,9 +12,6 @@ function Login() {
           Login Spotify App
         </a>
       </div>
-
-      {/* spotify login logo */}
-      {/* spotify login button */}
     </div>
   );
 }
