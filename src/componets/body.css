@@ -1,5 +1,25 @@
 .body {
   flex: 1;
+  padding: 20px;
   height: 100vh;
-  background: linear-gradient(transparent, #282828, rgba(0, 0, 0, 1));
+  color: white;
+  background: linear-gradient(transparent, rgb(91, 87, 115), rgb(0, 0, 0));
+}
+.body_info {
+  display: flex;
+  align-items: flex-end;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+.body_info > img {
+  height: 20vw;
+  margin-right: 10px;
+  box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+}
+.body_ingoText > p {
+  font-size: 12px;
+}
+.body_ingoText > h4 {
+  font-size: 40px;
+  margin-bottom: 10px;
 }

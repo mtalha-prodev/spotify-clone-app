@@ -36,6 +36,15 @@ function App() {
           playlists: playlists,
         });
       });
+
+      const result = spotify
+        .getPlaylist("5DLe5cWa0YSSSfIs9pnjvQ")
+        .then((discover_weekly) => {
+          dispatch({
+            type: "SET_DiSCOVER_WEEKLY",
+            discover_weekly: discover_weekly,
+          });
+        });
     }
   }, []);
 
@@ -44,9 +53,6 @@ function App() {
   return (
     <div className="App">
       {token ? <Player spotify={spotify} /> : <Login />}
-
-      {/* spotify login page */}
-      {/* <Login /> */}
     </div>
   );
 }
