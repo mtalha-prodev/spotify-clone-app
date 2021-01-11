@@ -1,8 +1,10 @@
 import React from "react";
 import Header from "./Header";
 import "./body.css";
-import bodyIfoImg from "../images/playlistImage.jpg";
 import { useDataLayerValue } from "../contaxtApi/DataLayer";
+import { Favorite, MoreHoriz, PlayCircleFilledSharp } from "@material-ui/icons";
+import SongRow from "./SongRow";
+
 function Body({ spotify }) {
   const [{ discover_weekly }, dispatch] = useDataLayerValue();
 
@@ -19,6 +21,16 @@ function Body({ spotify }) {
           <h4>descover weekly</h4>
           <p>{discover_weekly?.description}</p>
         </div>
+      </div>
+      <div className="body_song">
+        <div className="body_icons">
+          <PlayCircleFilledSharp className="body_shufle" />
+          <Favorite fontSize="large" />
+          <MoreHoriz />
+        </div>
+        {discover_weekly?.tracks.items.map((item) => (
+          <SongRow key={item.id} track={item.track} />
+        ))}
       </div>
     </div>
   );
